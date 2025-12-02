@@ -11,5 +11,13 @@
       width="848"
       height="57"
     />
+
+    <script>
+      navigator.permissions
+        .query({ name: "local-network-access" })
+        .then((result) => {
+          console.log("Permission status:", result.state); // Possible outputs: granted, denied, prompt
+        });
+    </script>
   </body>
 </html>
